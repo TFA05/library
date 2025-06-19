@@ -1,8 +1,16 @@
+@font-face {
+    font-family: 'Museo Sans 500';
+    src: url('./font/MuseoSans-500.woff2') format('woff2'),
+        url('./font/MuseoSans-500.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 /*
@@ -20,6 +28,7 @@ html,body{
 
 body{
     background-color: #B9D6F2;
+    
 }
 
 header{
@@ -30,6 +39,7 @@ header{
     background-color: #061A40;
     padding-bottom: 40px;
     box-shadow: 0px 14px 10px -10px #061A40;
+    
 }
 
 h1{
@@ -51,12 +61,13 @@ main{
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
     padding: 0px 20px;
+    font-family: 'Museo Sans 500';
 }
 
 .bkContainer{
     height: 200px;
     background-color: #183364;
-    border: 5px solid #061A40;
+    outline: 5px solid #061A40;
     border-radius: 10px;
     display: grid;
     grid-auto-flow: row;
@@ -71,6 +82,7 @@ main{
     display: flex;
     align-items: center;
     padding: 0px 10px;
+    height: 100%;
 }
 
 .bkContainer > div:nth-child(2n){
@@ -83,22 +95,19 @@ main{
     border-radius: 0px 0px 5px 5px;
 }
 
-.title + div{
-    font-size: 30px;
-    font-weight: bold;
-    margin-left: auto;
-    margin-right: 10px;
-}
-
 .title{
     font-size: 30px;
     font-weight: bold;
 }
 
+.author{
+    font-size: 18px;
+}
+
 .bkContainer img, .bkContainer svg{
     width: 22px;
     height: auto;
-    margin-right: 5px;
+    margin-right: 8px;
 }
 
 .bkContainer:hover {
@@ -107,11 +116,130 @@ main{
 
 .readSign{
     width: 23px;
-    font-size: 19px;
+    height: 22px;
+    font-size: 17px;
     font-weight: bold;
     color: white;
     background-color: #061A40;
     margin-right: 8px;
     display: flex;
     justify-content: center;
+    border-radius: 6px;
+    margin-bottom: 0px;
+    padding-top: 1px;
+}
+
+.addBkContainer{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 200px;
+}
+
+button{
+    width: 125px;
+    height: 100px;
+    font-size: 60px;
+    border: none;
+    border-radius: 10px;
+    background-color: #061A40;
+    color: white;
+    margin-bottom: 10px; 
+}
+
+button:hover{
+    background-color: #2455af;
+}
+
+.invis{
+    display: none;
+}
+
+form{
+    position: absolute;
+    background-color: rgb(6 17 44);
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 550px;
+    transform: translate(-50%, -50%);
+    font-family: 'Museo Sans 500';
+}
+
+.formContainer{
+    height: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.rowContainer{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 25px;
+    height: 100%;
+    padding: 10px 20px;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.rowContainer:nth-child(2n){
+    background-color: #183364;
+}
+
+.rowContainer:last-child{
+    align-items: center;
+    justify-content: center;
+}
+
+.rowContainer > input{
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.submitBtn{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #183364;
+}
+
+.exitBtn{
+    background-color: rgb(6 17 44);
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.deleteCardBtn{
+    width: 20px;
+    height: 30px;
+    font-size: 30px;
+    background-color: #183364;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: 7px;
+}
+
+.deleteCardBtn:hover{
+    background-color: #183364;
+}
+
+.blur{
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+.invalid{
+    outline: 2px solid red;
 }
