@@ -33,9 +33,9 @@ header{
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    background-color: var(--darkBlue);
+    background-color: var(--headerColor);
     padding-bottom: 40px;
-    box-shadow: 0px 14px 10px -10px var(--darkBlue);
+    box-shadow: 0px 14px 10px -10px var(--headerColor);
     
 }
 
@@ -63,15 +63,15 @@ main{
 
 .bkContainer{
     height: 200px;
-    background-color: var(--lDarkBlue);
-    outline: 5px solid var(--darkBlue);
+    background-color: var(--cardColor);
+    outline: 5px solid var(--headerColor);
     border-radius: 10px;
     display: grid;
     grid-auto-flow: row;
     align-items: center;
     color: white;
     font-size: 18px;
-    box-shadow: 15px 14px 15px -10px var(--darkBlue);
+    box-shadow: 15px 14px 15px -10px var(--headerColor);
     transition: transform 0.2s;
 }
 
@@ -85,7 +85,7 @@ main{
 .bkContainer > div:nth-child(2n){
     background-color: white;
     height: 100%;
-    color: var(--darkBlue);
+    color: var(--headerColor);
 }
 
 .bkContainer div:last-child{
@@ -117,7 +117,7 @@ main{
     font-size: 17px;
     font-weight: bold;
     color: white;
-    background-color: var(--darkBlue);
+    background-color: var(--headerColor);
     margin-right: 8px;
     display: flex;
     justify-content: center;
@@ -139,7 +139,7 @@ button{
     font-size: 60px;
     border: none;
     border-radius: 10px;
-    background-color: var(--darkBlue);
+    background-color: var(--headerColor);
     color: white;
     margin-bottom: 10px; 
 }
@@ -184,7 +184,7 @@ form{
 }
 
 .rowContainer:nth-child(2n){
-    background-color: var(--lDarkBlue);
+    background-color: var(--cardColor);
 }
 
 .rowContainer:last-child{
@@ -203,7 +203,7 @@ form{
     width: 100px;
     height: 50px;
     font-size: 20px;
-    background-color: var(--lDarkBlue);
+    background-color: var(--cardColor);
 }
 
 .exitBtn{
@@ -221,7 +221,7 @@ form{
     width: 20px;
     height: 30px;
     font-size: 30px;
-    background-color: var(--lDarkBlue);
+    background-color: var(--cardColor);
     font-size: 30px;
     font-weight: bold;
     margin-left: auto;
@@ -229,7 +229,7 @@ form{
 }
 
 .deleteCardBtn:hover{
-    background-color: var(--lDarkBlue);
+    background-color: var(--cardColor);
 }
 
 .blur{
