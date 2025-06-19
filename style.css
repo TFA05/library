@@ -11,15 +11,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --backgrColor: #B9D6F2;
+    --headerColor: #061A40;
+    --cardColor: #183364;
+    --hoverColor: #183364;
+    --formColor: rgb(6 17 44);
 }
-
-/*
-    B9D6F2
-    061A40
-    0353A4
-    006DAA
-    003559
-*/
 
 html,body{
     height: 100%;
@@ -27,7 +24,7 @@ html,body{
 }
 
 body{
-    background-color: #B9D6F2;
+    background-color: var(--backgrColor);
     
 }
 
@@ -36,9 +33,9 @@ header{
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    background-color: #061A40;
+    background-color: var(--darkBlue);
     padding-bottom: 40px;
-    box-shadow: 0px 14px 10px -10px #061A40;
+    box-shadow: 0px 14px 10px -10px var(--darkBlue);
     
 }
 
@@ -66,15 +63,15 @@ main{
 
 .bkContainer{
     height: 200px;
-    background-color: #183364;
-    outline: 5px solid #061A40;
+    background-color: var(--lDarkBlue);
+    outline: 5px solid var(--darkBlue);
     border-radius: 10px;
     display: grid;
     grid-auto-flow: row;
     align-items: center;
     color: white;
     font-size: 18px;
-    box-shadow: 15px 14px 15px -10px #061A40;
+    box-shadow: 15px 14px 15px -10px var(--darkBlue);
     transition: transform 0.2s;
 }
 
@@ -88,7 +85,7 @@ main{
 .bkContainer > div:nth-child(2n){
     background-color: white;
     height: 100%;
-    color: #061A40;
+    color: var(--darkBlue);
 }
 
 .bkContainer div:last-child{
@@ -120,7 +117,7 @@ main{
     font-size: 17px;
     font-weight: bold;
     color: white;
-    background-color: #061A40;
+    background-color: var(--darkBlue);
     margin-right: 8px;
     display: flex;
     justify-content: center;
@@ -142,13 +139,13 @@ button{
     font-size: 60px;
     border: none;
     border-radius: 10px;
-    background-color: #061A40;
+    background-color: var(--darkBlue);
     color: white;
     margin-bottom: 10px; 
 }
 
 button:hover{
-    background-color: #2455af;
+    background-color: var(--hoverColor);
 }
 
 .invis{
@@ -157,7 +154,7 @@ button:hover{
 
 form{
     position: absolute;
-    background-color: rgb(6 17 44);
+    background-color: var(--formColor);
     border-radius: 10px;
     top: 50%;
     left: 50%;
@@ -187,7 +184,7 @@ form{
 }
 
 .rowContainer:nth-child(2n){
-    background-color: #183364;
+    background-color: var(--lDarkBlue);
 }
 
 .rowContainer:last-child{
@@ -206,11 +203,11 @@ form{
     width: 100px;
     height: 50px;
     font-size: 20px;
-    background-color: #183364;
+    background-color: var(--lDarkBlue);
 }
 
 .exitBtn{
-    background-color: rgb(6 17 44);
+    background-color: var(--formColor);
     font-weight: bold;
     width: 40px;
     height: 40px;
@@ -224,7 +221,7 @@ form{
     width: 20px;
     height: 30px;
     font-size: 30px;
-    background-color: #183364;
+    background-color: var(--lDarkBlue);
     font-size: 30px;
     font-weight: bold;
     margin-left: auto;
@@ -232,7 +229,7 @@ form{
 }
 
 .deleteCardBtn:hover{
-    background-color: #183364;
+    background-color: var(--lDarkBlue);
 }
 
 .blur{
